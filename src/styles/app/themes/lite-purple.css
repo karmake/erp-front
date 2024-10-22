@@ -1,0 +1,262 @@
+.dark-theme {
+  background: #10163a;
+}
+.dark-theme .sidebar-left,
+.dark-theme .sidebar-left-secondary,
+.dark-theme .main-header,
+.dark-theme .card {
+  background: #10163a;
+  color: #fff !important;
+}
+.dark-theme .main-content-wrap {
+  background-color: #262c49;
+  color: #c2c6dc !important;
+}
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme h5,
+.dark-theme h6,
+.dark-theme .card-title,
+.dark-theme .text-title {
+  color: #c2c6dc;
+}
+.dark-theme .card-title {
+  color: #c2c6dc !important;
+}
+.dark-theme a {
+  color: #c2c6dc !important;
+}
+.dark-theme input {
+  background: #262c49 !important;
+  border-color: #10163a;
+}
+.dark-theme .app-footer {
+  margin-top: 2rem;
+  background: #10163a;
+  padding: 1.25rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.dark-theme .app-footer .footer-bottom {
+  width: 100%;
+}
+.dark-theme .app-footer .footer-bottom .logo {
+  width: 3rem;
+  height: auto;
+  margin: 4px;
+}
+.dark-theme .navigation-left .nav-item {
+  color: #c2c6dc !important;
+  border-bottom: 1px solid #262c49 !important;
+}
+.dark-theme .navigation-left .nav-item .nav-item-hold {
+  color: #c2c6dc !important;
+}
+.dark-theme .navigation-left .nav-item .nav-item-hold a {
+  color: #c2c6dc !important;
+}
+.dark-theme .sidebar-left-secondary .childNav {
+  list-style: none;
+  padding: 0;
+}
+.dark-theme .sidebar-left-secondary .childNav li.nav-item {
+  display: block;
+}
+.dark-theme .sidebar-left-secondary .childNav li.nav-item a {
+  color: #c2c6dc;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 12px 24px;
+  transition: 0.15s all ease-in;
+}
+.dark-theme .sidebar-left-secondary .childNav li.nav-item a:hover {
+  background: #262c49;
+}
+.dark-theme .sidebar-left-secondary .childNav li.nav-item a.open {
+  color: #880a1f;
+}
+.dark-theme .sidebar-left-secondary .childNav li.nav-item a.router-link-active {
+  color: #880a1f;
+}
+.dark-theme .sidebar-left-secondary .childNav li.nav-item a.router-link-active .nav-icon {
+  color: #880a1f;
+}
+.dark-theme .sidebar-left-secondary .childNav li.nav-item a .nav-icon {
+  font-size: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
+  color: #c2c6dc;
+}
+.dark-theme .sidebar-left-secondary .childNav li.nav-item a .item-name {
+  vertical-align: middle;
+  font-weight: 400;
+}
+.dark-theme .sidebar-left-secondary .childNav li.nav-item a .dd-arrow {
+  margin-left: auto;
+  font-size: 11px;
+  transition: all 0.3s ease-in;
+}
+.dark-theme .search-ui {
+  position: fixed;
+  background: #262c49;
+}
+.dark-theme .search-ui input.search-input {
+  background: #262c49;
+}
+.dark-theme .search-ui input.search-input::-moz-placeholder {
+  color: #c2c6dc;
+}
+.dark-theme .search-ui input.search-input::placeholder {
+  color: #c2c6dc;
+}
+.dark-theme .search-bar {
+  background: #10163a !important;
+  border: 1px solid #262c49 !important;
+}
+.dark-theme .search-bar input {
+  color: #c2c6dc !important;
+  background: #10163a !important;
+}
+.dark-theme .search-bar .search-icon {
+  font-size: 18px;
+  width: 24px;
+  display: inline-block;
+}
+.dark-theme .border-top {
+  border-top: 1px solid #10163a !important;
+}
+.dark-theme .tab-border {
+  border: 1px dashed #262c49 !important;
+  margin: 30px 0 !important;
+}
+.dark-theme table.vgt-table {
+  background: #10163a;
+}
+.dark-theme table.tableOne.vgt-table thead tr th {
+  background: #10163a;
+  border-color: #262c49;
+}
+.dark-theme .list-group-item {
+  background-color: #10163a;
+  border: 1px solid #262c49;
+}
+.dark-theme .page-link {
+  color: #c2c6dc;
+  background-color: #262c49;
+  border: 1px solid #10163a;
+}
+.dark-theme .dropdown-menu {
+  color: #c2c6dc;
+  background-color: #262c49;
+  border: 1px solid #262c49;
+}
+.dark-theme .table td {
+  border-top: 1px solid #262c49;
+}
+.dark-theme .table thead th {
+  border-bottom: 2px solid #262c49;
+}
+.dark-theme .table .thead-light th {
+  color: #c2c6dc;
+  background-color: #262c49;
+  border-color: #262c49;
+}
+.dark-theme .apexcharts-xaxis-label {
+  fill: #c2c6dc;
+}
+.dark-theme .apexcharts-yaxis-label {
+  fill: #c2c6dc;
+}
+.dark-theme .apexcharts-tooltip.light {
+  border: 1px solid #10163a;
+  background: #262c49;
+}
+.dark-theme .apexcharts-tooltip.light .apexcharts-tooltip-title {
+  background: #10163a;
+  border-bottom: 1px solid #10163a;
+}
+.dark-theme .apexcharts-legend-text {
+  color: #c2c6dc !important;
+}
+.dark-theme .input-group-text {
+  color: #c2c6dc;
+  background-color: #262c49;
+  border: 1px solid #262c49;
+}
+.dark-theme .custom-select {
+  color: #c2c6dc;
+  background-color: #262c49;
+  border: 1px solid #262c49;
+}
+.dark-theme .header-icon:hover {
+  background: #262c49 !important;
+}
+.dark-theme .calendar-parent {
+  background-color: #10163a;
+}
+.dark-theme .cv-day,
+.dark-theme .cv-event,
+.dark-theme .cv-header-day,
+.dark-theme .cv-header-days,
+.dark-theme .cv-week,
+.dark-theme .cv-weeks {
+  border-style: solid;
+  border-color: #262c49;
+}
+.dark-theme .theme-default .cv-day.outsideOfMonth,
+.dark-theme .theme-default .cv-day.past {
+  background-color: #10163a;
+}
+.dark-theme .theme-default .cv-day.today {
+  background-color: #262c49;
+}
+.dark-theme .theme-default .cv-header,
+.dark-theme .theme-default .cv-header-day {
+  background-color: #262c49;
+}
+.dark-theme .cv-header,
+.dark-theme .cv-header button {
+  border-style: solid;
+  border-color: #10163a;
+  background: #262c49;
+}
+.dark-theme .vgt-global-search.vgt-clearfix {
+  background: #10163a;
+}
+.dark-theme table.tableOne tbody tr th.line-numbers {
+  background: #10163a;
+}
+.dark-theme div.vgt-wrap__footer.vgt-clearfix {
+  background: #10163a;
+}
+.dark-theme table.vgt-table td {
+  border-bottom: 1px solid #262c49;
+  color: #c2c6dc;
+}
+.dark-theme table.tableOne tbody tr th.vgt-checkbox-col {
+  background: #10163a;
+}
+.dark-theme th.line-numbers {
+  border-bottom: 1px solid #10163a;
+}
+.dark-theme th.vgt-checkbox-col {
+  border-bottom: 1px solid #10163a;
+}
+.dark-theme .ul-widget__item {
+  border-bottom: 0.07rem dashed #262c49;
+}
+.dark-theme .page-item.disabled .page-link {
+  background-color: #10163a;
+  border-color: #10163a;
+}
+.dark-theme ul.gull-pagination li .page-link {
+  border-color: #10163a !important;
+}
+.dark-theme ul.gull-pagination li .page-link:hover {
+  background: #10163a;
+}/*# sourceMappingURL=lite-purple.css.map */

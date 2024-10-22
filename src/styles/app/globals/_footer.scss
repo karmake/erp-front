@@ -1,0 +1,35 @@
+.app-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: $gray-200;
+  padding: 0.5rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+  overflow-x: hidden;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ajusta o espaço entre os itens */
+  width: 90%;
+  white-space: nowrap;
+  overflow-x: auto;
+  padding-right: 10px; /* Adiciona um pouco de espaço à direita para evitar corte */
+  padding-left: 10px;
+}
+
+.footer-item {
+  margin-left: 1rem;
+  flex-shrink: 1; /* Permite que os itens encolham para caber na tela */
+  min-width: 0; /* Impede que os itens empurrem o conteúdo para fora */
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.footer-icon {
+  margin-right: 0.3rem;
+}
