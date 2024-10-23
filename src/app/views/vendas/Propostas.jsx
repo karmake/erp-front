@@ -50,13 +50,16 @@ const PedidoHeader = styled.div`
 `;
 
 // Aplicação das cores no Tab
-const StyledTab = styled(Tab)`
-  &.nav-link {
-    border-top: 3px solid ${(props) => props.statusColor || '#e0e0e0'};
+const StyledTab = styled.div`
+  .nav-link {
+    border-top: 1px solid transparent;
     border-bottom: none;
     color: #000;
+    background-color: transparent; 
   }
-  &.nav-link.active {
+
+  .nav-link.active {
+    border-top: 1px solid ${(props) => props.statusColor || "#e0e0e0"};
     background-color: #f0f0f0;
     color: #000;
   }
@@ -175,8 +178,8 @@ export default function PedidoShopee() {
   const itemsPerPage = 15;
   const [modalShow, setModalShow] = useState(false);
   const [selectedPedido, setSelectedPedido] = useState(null);
-  const [imagens, setImagens] = useState({});
-
+  const [imagens, setImagens] = useState({}); 
+  
   const handleSelectAll = (event) => {
     if (event.target.checked) {
       setSelectedOrders(pedidos.map((order) => order.id));
@@ -452,22 +455,70 @@ export default function PedidoShopee() {
     <Container>
       <Title>Meus Pedidos</Title>
 
+      <StyledTab >
       <Tabs
-      id="pedido-tabs"
-      activeKey={key}
-      onSelect={(k) => setKey(k)}
-      className="mb-3"
-    >
-      <StyledTab eventKey="todos" title="Todos" statusColor="#e0e0e0" />
-      <StyledTab eventKey="eAberto" title="Em Aberto" statusColor={getStatusColor("Em Aberto")} />
-      <StyledTab eventKey="aprovado" title="Aprovado" statusColor={getStatusColor("Aprovado")} />
-      <StyledTab eventKey="pEnvio" title="Preparando Envio" statusColor={getStatusColor("Preparando Envio")} />
-      <StyledTab eventKey="faturado" title="Faturado" statusColor={getStatusColor("Faturado")} />
-      <StyledTab eventKey="ppEnvio" title="Pronto para Envio" statusColor={getStatusColor("Pronto para Envio")} />
-      <StyledTab eventKey="enviado" title="Enviado" statusColor={getStatusColor("Enviado")} />
-      <StyledTab eventKey="entregue" title="Entregue" statusColor={getStatusColor("Entregue")} />
-      <StyledTab eventKey="nEntregue" title="Não Entregue" statusColor={getStatusColor("Não Entregue")} />
-    </Tabs>
+        id="pedido-tabs"
+        activeKey={key}
+        onSelect={(k) => setKey(k)}
+        className="mb-3"
+        statusColor={getStatusColor(key)}
+      >
+        <Tab
+        
+          eventKey="todos"
+          title="Todos"
+          
+        />
+        <Tab
+        className="nav-link"
+          eventKey="eAberto"
+          title="Em Aberto"
+          
+        />
+        <Tab
+        className="nav-link"
+          eventKey="aprovado"
+          title="Aprovado"
+           
+        />
+        <Tab
+        className="nav-link"
+          eventKey="pEnvio"
+          title="Preparando Envio"
+           
+        />
+        <Tab
+        className="nav-link"
+          eventKey="faturado"
+          title="Faturado"
+          
+        />
+        <Tab
+        className="nav-link"
+          eventKey="ppEnvio"
+          title="Pronto para Envio"
+          
+        />
+        <Tab
+        className="nav-link"
+          eventKey="enviado"
+          title="Enviado"
+          
+        />
+        <Tab
+        className="nav-link"
+          eventKey="entregue"
+          title="Entregue"
+           
+        />
+        <Tab
+          className="nav-link"
+          eventKey="nEntregue"
+          title="Não Entregue"
+           
+        />
+      </Tabs>
+      </StyledTab>
 
       <Alert variant="warning">
         <strong>Atenção!</strong> 4% de seus pedidos não foram enviados semana
