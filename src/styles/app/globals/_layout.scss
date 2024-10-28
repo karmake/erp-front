@@ -7,7 +7,7 @@
   float: right;
   margin-top: $topbar-height;
   transition: all 0.24s ease-in-out;
-  padding: 2rem 2rem 0; 
+  /* padding: 2rem 2rem 0;  */
   position: relative;
   min-height: calc(100vh - #{$topbar-height});
   background: lighten($gray-100, 1);
@@ -323,7 +323,7 @@
     float: right;
     margin-top: 160px !important;
     transition: all 0.24s ease-in-out;
-    padding: 2rem 2rem 0;  /**/
+    /*padding: 2rem 2rem 0;  */
     position: relative;
     min-height: calc(100vh - 160px);
     background: #fff;

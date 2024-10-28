@@ -247,6 +247,49 @@ const Overlay = styled.div`
   z-index: 999;
 `;
 
+const Sidebar = styled.div`
+  width: 250px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+`;
+
+const SidebarTitle = styled.h4`
+  font-weight: bold;
+  margin-bottom: 20px;
+`;
+
+const SidebarSection = styled.div`
+  margin-bottom: 20px;
+`;
+
+const SidebarLink = styled.div`
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+
+  &:hover {
+    color: #007bff;
+  }
+`;
+
+const SubMenu = styled.div`
+  display: ${(props) => (props.isOpen ? "block" : "none")};
+  padding-left: 15px;
+`;
+
+const MainContainer = styled.div`
+  padding-left: 270px;
+`;
 
 export default function PedidoShopee() {
   const [key, setKey] = useState("todos");
@@ -267,6 +310,10 @@ export default function PedidoShopee() {
   const [nfeModalShow, setNfeModalShow] = useState(false);
   const [selectedNfe, setSelectedNfe] = useState(null);
 
+  const [isTotalPedidosOpen, setIsTotalPedidosOpen] = useState(false);
+  const [isProcessandoOpen, setIsProcessandoOpen] = useState(false);
+  const [isOutrosPedidosOpen, setIsOutrosPedidosOpen] = useState(false);
+
   const countPedidosByStatus = (status) => {
     if (status === "todos") {
       return pedidos.length;
@@ -285,6 +332,18 @@ export default function PedidoShopee() {
         return [...prevExpandedOrders, orderId];
       }
     });
+  };
+
+  const toggleTotalPedidos = () => {
+    setIsTotalPedidosOpen(!isTotalPedidosOpen);
+  };
+
+  const toggleProcessando = () => {
+    setIsProcessandoOpen(!isProcessandoOpen);
+  };
+
+  const toggleOutrosPedidos = () => {
+    setIsOutrosPedidosOpen(!isOutrosPedidosOpen);
   };
 
   const toggleLayout = (pedidoId) => {
@@ -688,6 +747,73 @@ const renderDrawer = (pedido) => {
 
   return (
     <div style={{padding: '2rem 2rem 0'}}>
+         <Sidebar>
+        <SidebarTitle>Pedidos</SidebarTitle>
+
+        <SidebarSection>
+          <SidebarLink onClick={toggleTotalPedidos}>
+            <span>Total Pedidos</span>
+            <span>{isTotalPedidosOpen ? "▾" : "▸"}</span>
+          </SidebarLink>
+
+          <SubMenu isOpen={isTotalPedidosOpen}>
+            <SidebarLink>
+              <span>Pedidos Recentes</span>
+            </SidebarLink>
+            <SidebarLink>
+              <span>Pedidos Históricos</span>
+            </SidebarLink>
+          </SubMenu>
+        </SidebarSection>
+
+        <SidebarSection>
+          <SidebarLink onClick={toggleProcessando}>
+            <span>Processando Pedidos</span>
+            <span>{isProcessandoOpen ? "▾" : "▸"}</span>
+          </SidebarLink>
+
+          <SubMenu isOpen={isProcessandoOpen}>
+            <SidebarLink>
+              <span>Para Reservar</span>
+              <span>0</span>
+            </SidebarLink>
+            <SidebarLink>
+              <span>Para Emitir</span>
+              <span>1</span>
+            </SidebarLink>
+            <SidebarLink>
+              <span>Para Enviar</span>
+              <span>3</span>
+            </SidebarLink>
+            <SidebarLink>
+              <span>Para Imprimir</span>
+              <span>3</span>
+            </SidebarLink>
+            <SidebarLink>
+              <span>Para Retirada</span>
+              <span>514</span>
+            </SidebarLink>
+            <SidebarLink>
+              <span>Enviado</span>
+              <span>2417</span>
+            </SidebarLink>
+          </SubMenu>
+        </SidebarSection>
+
+        <SidebarSection>
+          <SidebarLink onClick={toggleOutrosPedidos}>
+            <span>Outras</span>
+            <span>{isOutrosPedidosOpen ? "▾" : "▸"}</span>
+          </SidebarLink>
+          <SubMenu isOpen={isOutrosPedidosOpen}>
+            <SidebarLink>
+              <span>Anulado</span>
+              <span>0</span>
+            </SidebarLink>
+          </SubMenu>
+        </SidebarSection>
+      </Sidebar>
+      <MainContainer>
     <Container>
       <Title>Meus Pedidos</Title>
 
@@ -1119,6 +1245,7 @@ const renderDrawer = (pedido) => {
         </Modal.Footer>
       </Modal>
     </Container>
+    </MainContainer>
     </div>
   );
 }

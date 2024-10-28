@@ -25,21 +25,21 @@ export const navigations = [
       // { icon: "i-Calculator-2", name: "Contabilidade", path: "/dashboard/contabilidade", type: "link" }
     ],
   },
-  // {
-  //   name: "Vendas",
-  //   description: "Controle de vendas.",
-  //   type: "dropDown",
-  //   icon: "i-Shopping-Cart", // Ícone para o menu principal "Vendas"
-  //   sub: [
-  //     {
-  //       icon: "i-Receipt-3",
-  //       name: "Propostas",
-  //       path: "/vendas/propostas",
-  //       type: "link",
-  //     },
-  //     /*  { icon: "i-Credit-Card", name: "Liberações E Análise De Crédito", path: "/vendas/creditos", type: "link" } */
-  //   ],
-  // },
+  {
+    name: "Vendas",
+    description: "Controle de vendas.",
+    type: "dropDown",
+    icon: "i-Shopping-Cart", // Ícone para o menu principal "Vendas"
+    sub: [
+      {
+        icon: "i-Receipt-3",
+        name: "Propostas",
+        path: "/vendas/pedidos",
+        type: "link",
+      },
+      /*  { icon: "i-Credit-Card", name: "Liberações E Análise De Crédito", path: "/vendas/creditos", type: "link" } */
+    ],
+  },
    {
     name: "Cadastros",
     description: "Gerenciamento de cadastros.",

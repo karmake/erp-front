@@ -5,7 +5,7 @@ import clsx from "clsx";
 
 import Layout2Header from "./header";
 import Layout2Sidenav from "./sidebar";
-import Footer from "../shared/Footer";
+// import Footer from "../shared/Footer";
 
 import Loading from "app/components/Loading";
 import GullSearch from "app/layouts/shared/GullSearch";
@@ -46,7 +46,7 @@ export default function Layout2({ children }) {
           </Suspense>
 
           {/* FOOTER SECTION */}
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </div>
 

@@ -5,7 +5,6 @@ import clsx from "clsx";
 
 import Layout1Header from "./header";
 import Layout1Sidenav from "./sidebar";
-import Footer from "../shared/Footer";
 
 import Loading from "app/components/Loading";
 import GullSearch from "app/layouts/shared/GullSearch";
@@ -15,11 +14,11 @@ export default function Layout1({ children }) {
   const dispatch = useDispatch();
   const { settings } = useSelector((state) => state.layout);
 
-  const { layout1Settings, footer } = settings || {};
+  const { layout1Settings } = settings || {}; // Remove o 'footer' daqui
 
   const handleSearchBoxClose = () => {
     const merged = merge({}, settings, {
-      layout1Settings: { searchBox: { open: false } }
+      layout1Settings: { searchBox: { open: false } },
     });
 
     dispatch(setLayoutSettings(merged));
@@ -36,19 +35,20 @@ export default function Layout1({ children }) {
 
         <div
           className={clsx("main-content-wrap d-flex flex-column", {
-            "sidenav-open": layout1Settings.leftSidebar.open
-          })}>
+            "sidenav-open": layout1Settings.leftSidebar.open,
+          })}
+        >
           <Suspense fallback={<Loading />}>
             <div className="main-content">{children}</div>
           </Suspense>
-
-          {/* FOOTER AREA */}
-          {footer.show ? <Footer /> : null}
         </div>
       </div>
 
       {/* SEARCH AREA MODAL */}
-      <GullSearch open={layout1Settings.searchBox.open} handleClose={handleSearchBoxClose} />
+      <GullSearch
+        open={layout1Settings.searchBox.open}
+        handleClose={handleSearchBoxClose}
+      />
     </Fragment>
   );
 }

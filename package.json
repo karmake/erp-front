@@ -114,5 +114,5 @@
     "react-dnd-html5-backend": "^14.0.0",
     "react-dom": "^18.2.0"
   },
-  "proxy": "https://app.erpwise.com.br"
+  "proxy": "https://erp.easytogo.com.br"
 }

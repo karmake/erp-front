@@ -9,10 +9,10 @@
     float: right;
     margin-top: $topbar-height;
     transition: all .24s ease-in-out;
-     padding: 2rem 2rem 0; /*AQYUUI é do tema*/
+    /* padding: 2rem 2rem 0; /*AQYUUI é do tema*/
     position: relative;
-    min-height: calc(100vh - #{$topbar-height});
-    background: $white;
+    /* min-height: calc(100vh - #{$topbar-height}); */
+    background: #f8f9fa;
     &.sidenav-open {
         width: calc(100% - #{$sidebar-left-width});
     }

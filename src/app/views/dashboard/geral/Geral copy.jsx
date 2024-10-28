@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+/* import React, { useEffect, useState } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Breadcrumb from "app/components/Breadcrumb";
@@ -195,3 +195,4 @@ export default function Dashboard1() {
     </div>
   );
 }
+ */

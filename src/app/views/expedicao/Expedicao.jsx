@@ -256,7 +256,7 @@ export default function Expedicao() {
     };
 
     fetch(
-      `https://api.erpwise.com.br/api/fornecedores/imagens/3?produto=${CODIGO}`,
+      `https://erp.easytogo.com.br/api/fornecedores/imagens/3?produto=${CODIGO}`,
       requestOptions
     )
       .then((response) => response.json())
